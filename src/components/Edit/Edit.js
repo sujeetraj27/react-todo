@@ -10,7 +10,7 @@ import { useState } from "react";
 const Edit = () => {
   const [users, setUser] = useContext(UserContext);
   const { id } = useParams();
-  const user = users.filter((user) => user.id == id);
+  const user = users.filter((user) => user.id === id);
 
   const [title, setTitle] = useState(user[0].title);
   const [desc, setDesc] = useState(user[0].desc);
